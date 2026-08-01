@@ -1,0 +1,19 @@
+{
+  "timestamp": 1784393152.2630687,
+  "system_metrics": {
+    "avg_cpu_percent": 25.05,
+    "max_cpu_percent": 28.5,
+    "avg_memory_mb": 90.86,
+    "max_memory_mb": 90.86
+  },
+  "database_performance": {
+    "total_writes": 50,
+    "elapsed_seconds": 0.0665,
+    "writes_per_second": 752.14
+  },
+  "navigation_performance": {
+    "total_lookups": 100,
+    "elapsed_seconds": 0.0006,
+    "lookups_per_second": 173677.18
+  }
+}

@@ -1,0 +1,5 @@
+[
+  {"report_type": "daily", "cron": "0 2 * * *"},
+  {"report_type": "weekly", "cron": "0 3 * * 0"},
+  {"report_type": "monthly", "cron": "0 4 1 * *"}
+]

@@ -1,0 +1,31 @@
+[
+  {
+    "id": "fire_risk_critical",
+    "name": "High Fire Risk Detection",
+    "conditions": [
+      {"type": "sensor", "field": "smoke", "operator": ">=", "value": 200},
+      {"type": "sensor", "field": "temp", "operator": ">=", "value": 45.0},
+      {"type": "vision", "field": "fire_detected", "operator": "==", "value": true}
+    ],
+    "severity": "CRITICAL",
+    "message": "High Fire Risk: Elevated smoke, temperature, and visual flame signatures confirmed."
+  },
+  {
+    "id": "smoke_leak_warning",
+    "name": "Elevated Gas/Smoke Alert",
+    "conditions": [
+      {"type": "sensor", "field": "smoke", "operator": ">=", "value": 300}
+    ],
+    "severity": "HIGH",
+    "message": "Elevated gas/smoke concentration detected."
+  },
+  {
+    "id": "heat_anomaly_warning",
+    "name": "Critical Heat Hazard Alert",
+    "conditions": [
+      {"type": "sensor", "field": "temp", "operator": ">=", "value": 55.0}
+    ],
+    "severity": "CRITICAL",
+    "message": "Critical high-temperature anomaly detected."
+  }
+]

@@ -1,0 +1,181 @@
+{
+  "zones": {
+    "chem_lab": {
+      "name": "Chemistry Lab",
+      "floor": 1,
+      "high_risk_baseline": true,
+      "hazard_type": "Chemical Hazard",
+      "icon": "\u2697\ufe0f",
+      "position": [
+        170.0,
+        52.0
+      ],
+      "size": [
+        250,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "cad_lab"
+      ]
+    },
+    "cad_lab": {
+      "name": "CAD Lab",
+      "floor": 1,
+      "high_risk_baseline": false,
+      "hazard_type": "Workstations",
+      "icon": "\ud83d\udda5\ufe0f",
+      "position": [
+        380.0,
+        52.0
+      ],
+      "size": [
+        130,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "chem_lab",
+        "kitchen"
+      ]
+    },
+    "kitchen": {
+      "name": "Kitchen",
+      "floor": 1,
+      "high_risk_baseline": true,
+      "hazard_type": "Gas & Heat Hazard",
+      "icon": "\ud83c\udf73",
+      "position": [
+        615.0,
+        52.0
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "cad_lab"
+      ]
+    },
+    "corridor": {
+      "name": "Main Corridor",
+      "floor": 1,
+      "high_risk_baseline": false,
+      "position": [
+        410.0,
+        140.0
+      ],
+      "size": [
+        780,
+        55
+      ],
+      "adjacencies": [
+        "chem_lab",
+        "cad_lab",
+        "kitchen",
+        "classroom_1",
+        "atl_lab",
+        "classroom_2"
+      ]
+    },
+    "classroom_1": {
+      "name": "Classroom 1",
+      "floor": 1,
+      "high_risk_baseline": false,
+      "hazard_type": "Standard Area",
+      "icon": "\ud83c\udfeb",
+      "position": [
+        170.0,
+        228.0
+      ],
+      "size": [
+        250,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "atl_lab"
+      ]
+    },
+    "atl_lab": {
+      "name": "ATL Lab",
+      "floor": 1,
+      "high_risk_baseline": true,
+      "hazard_type": "Electrical & Robotics",
+      "icon": "\u26a1",
+      "position": [
+        380.0,
+        228.0
+      ],
+      "size": [
+        130,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "classroom_1",
+        "classroom_2"
+      ]
+    },
+    "classroom_2": {
+      "name": "Classroom 2",
+      "floor": 1,
+      "high_risk_baseline": false,
+      "hazard_type": "Standard Area",
+      "icon": "\ud83c\udfeb",
+      "position": [
+        615.0,
+        228.0
+      ],
+      "size": [
+        270,
+        80
+      ],
+      "adjacencies": [
+        "corridor",
+        "atl_lab"
+      ]
+    }
+  },
+  "thresholds": {
+    "temp_critical": 65.0,
+    "temp_high": 50.0,
+    "temp_elevated": 38.0,
+    "temp_warm": 30.0,
+    "smoke_critical": 600,
+    "smoke_high": 400,
+    "smoke_moderate": 200,
+    "smoke_low": 100,
+    "smoke_trace": 50,
+    "humidity_very_dry": 15.0,
+    "humidity_dry": 25.0,
+    "humidity_low": 35.0,
+    "score_red": 80,
+    "score_orange": 60,
+    "score_yellow": 30,
+    "rover_auto_dispatch_level": 70,
+    "sensor_poll_rate": 2.0
+  },
+  "hardware_config": {
+    "motor_pwm_max": 255,
+    "motor_pwm_patrol": 180,
+    "pin_map": {
+      "dht22_data": 4,
+      "mq2_aout": 34,
+      "hcsr04_trig": 5,
+      "hcsr04_echo": 18,
+      "l298n_ena": 25,
+      "l298n_in1": 26,
+      "l298n_in2": 27,
+      "l298n_in3": 14,
+      "l298n_enb": 13
+    }
+  },
+  "navigation_config": {
+    "base_zone": "corridor",
+    "travel_speed": 45.0,
+    "obstacle_threshold_cm": 30.0,
+    "recovery_max_retries": 3
+  }
+}

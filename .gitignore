@@ -1,0 +1,32 @@
+# Environment & secrets
+.env
+.env.local
+.env.*.local
+
+# Python & Caching
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Dependencies & Build output
+node_modules/
+dist/
+build/
+.venv/
+venv/
+
+# Logs & cache
+logs/
+*.log
+.firebase/
+.gemini/
+
+# IDE & OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Duplicate nested directory
+Sentinel Twin/
